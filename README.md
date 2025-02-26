@@ -4,9 +4,9 @@ BISV Hackathon with Flask
 
 # Instructions
 
-1. Install python [here](https://www.python.org/downloads/)
+1. Install python [here](https://www.python.org/downloads/). Ensure you have the latest version.
 2. Install git [here](https://git-scm.com/downloads)
-3. Navigate to the folder where you want the project using the `cd` command.
+3. Navigate to the folder where you want the project to be located using the `cd` command.
 4. Run the following command. A folder called HackathonFlask will form.
 
 ```
@@ -29,6 +29,7 @@ pip install -r requirements.txt
 # Navigating the Project
 
 - All html files are located in the templates folder. They use an extension called Jinja for several useful features.
+  - All html files inherit from base.html, which defines the basic page layout with a navigation bar.
 - All css and javascript files are located in the static folder. Css will be used sparingly because we have a library called bootstrap with many useful templates.
 - The app folder contains the core functionality. **init**.py contains the `create_app` function, which returns the app. models.py defines all the database models we store. routes.py stores the various urls and the backend code that runs when a url is accessed.
 
