@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 - All html files are located in the templates folder. They use an extension called Jinja for several useful features.
   - All html files inherit from base.html, which defines the basic page layout with a navigation bar.
-- All css and javascript files are located in the static folder. css will be used sparingly because we have a library called bootstrap with many useful templates.
+- All styles are defined in style.css in the static folder. All scripts are defined in script.js in the static folder. Anything defined in these files will be global to all html files.
   - Link to the [bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - The app folder contains the core functionality. **init**.py contains the `create_app` function, which returns the app. models.py defines all the database models we store. routes.py stores the various urls and the backend code that runs when a url is accessed.
 
