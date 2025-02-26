@@ -33,3 +33,16 @@ pip install -r requirements.txt
 - The app folder contains the core functionality. **init**.py contains the `create_app` function, which returns the app. models.py defines all the database models we store. routes.py stores the various urls and the backend code that runs when a url is accessed.
 
 # Adding a Model to the Database
+
+1. Define a new model in models.py.
+2. Run the following command:
+
+```
+flask db migrate -m "Describe your changes here"
+```
+
+3. Run the following command:
+
+```
+flask db upgrade
+```
