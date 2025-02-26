@@ -20,5 +20,16 @@ pip install -r requirements.txt
 ```
 
 6. To run the server, run `flask run` in the terminal.
-7. To synchronize your local directory with the github repository, run `git pull`
-8. To push your changes to the github repository, run `git push`. Note that you may need to do `git pull` first to sync changes.
+7. To pull changes to the github repository onto your local machine, run `git pull`
+8. To push changes to the github repository from your local machine:
+   1. Run `git add .`
+   2. Run `git commit -m "A useful commit message"`. This commit message tells everyone the changes you made.
+   3. Run `git push`. Note that you may need to run `git pull` first if the github repository has changed since last time.
+
+# Navigating the Project
+
+- All html files are located in the templates folder. They use an extension called Jinja for several useful features.
+- All css and javascript files are located in the static folder. Css will be used sparingly because we have a library called bootstrap with many useful templates.
+- The app folder contains the core functionality. **init**.py contains the `create_app` function, which returns the app. models.py defines all the database models we store. routes.py stores the various urls and the backend code that runs when a url is accessed.
+
+# Adding a Model to the Database
