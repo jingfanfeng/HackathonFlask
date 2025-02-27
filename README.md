@@ -19,9 +19,10 @@ git clone https://github.com/jingfanfeng/HackathonFlask
 pip install -r requirements.txt
 ```
 
-6. To run the server, run `flask run` in the terminal.
-7. To pull changes to the github repository onto your local machine, run `git pull`
-8. To push changes to the github repository from your local machine:
+6. Run `flask db upgrade` to generate your local database.
+7. To run the server, run `flask run` in the terminal.
+8. To pull changes to the github repository onto your local machine, run `git pull`
+9. To push changes to the github repository from your local machine:
    1. Run `git add .`
    2. Run `git commit -m "A useful commit message"`. This commit message tells everyone the changes you made.
    3. Run `git push`. Note that you may need to run `git pull` first if the github repository has changed since last time.
