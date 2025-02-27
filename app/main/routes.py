@@ -1,10 +1,8 @@
-from flask import Blueprint, render_template
-
-bp = Blueprint('main', __name__)
+from flask import render_template
+from . import bp
 
 
 @bp.route('/')
-# ‘/’ URL is bound with hello_world() function.
 def home():
     return render_template('home.html')
 
