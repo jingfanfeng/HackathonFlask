@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 # Navigating the Project
 
-- All html files are located in the templates folder. They use an extension called Jinja for several useful features.
+- All html files are located in the templates folder. They use the Jinja extension.
   - All html files inherit from base.html, which defines the basic page layout with a navigation bar.
 - All styles are defined in style.css in the static folder. All scripts are defined in script.js in the static folder. Anything defined in these files will be global to all html files.
   - Link to the [bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
