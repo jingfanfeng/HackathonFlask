@@ -32,11 +32,14 @@ def create_app():
     login_manager.init_app(app)
 
     # Register blueprints
-    from .main import bp as main_bp # noqa: E402
+    from .main import bp as main_bp  # noqa: E402
     app.register_blueprint(main_bp)
 
     from .auth import bp as auth_bp
-    app.register_blueprint(auth_bp) # noqa: E402
+    app.register_blueprint(auth_bp)  # noqa: E402
+
+    from .app import bp as app_bp
+    app.register_blueprint(app_bp, url_prefix='/app')  # noqa: E402
 
     with app.app_context():
         from . import models  # Import models so they are registered
