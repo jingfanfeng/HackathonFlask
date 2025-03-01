@@ -29,5 +29,5 @@ class SignupForm(FlaskForm):
         EqualTo('confirm', message='Passwords must match')
     ])
     confirm = PasswordField('Repeat Password', validators=[
-                            InputRequired(), EqualTo('password')])
+                            InputRequired(), EqualTo('password', message='Password is not equal to repeated password')])
     submit = SubmitField('Sign Up')

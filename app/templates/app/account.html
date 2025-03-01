@@ -1,4 +1,14 @@
 {% extends 'base.html' %} {% block title %} Account {% endblock %} {% block
 content %}
 <h1>Account Page</h1>
+<hr />
+
+<h2>Delete Account</h2>
+<form method="POST">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+  <button type="submit" class="btn btn-danger">Delete Account</button>
+  {% if delete_account_error %}
+  <div class="invalid-feedback d-block">{{delete_account_error}}</div>
+  {% endif %}
+</form>
 {% endblock %}

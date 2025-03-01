@@ -18,10 +18,6 @@ def signin():
             login_user(user)
             return redirect(url_for('app.app'))
         flash('Invalid email or password.', 'danger')
-    else:
-        for field, errors in form.errors.items():
-            for error in errors:
-                flash(f'{error}', 'danger')
     return render_template('auth/signin.html', form=form)
 
 
@@ -47,10 +43,6 @@ def signup():
             db.session.rollback()
             flash(
                 'An unexpected error occurred during registration. Please try again later.', 'danger')
-    else:
-        for field, errors in form.errors.items():
-            for error in errors:
-                flash(f'{error}', 'danger')
     return render_template('auth/signup.html', form=form)
 
 
